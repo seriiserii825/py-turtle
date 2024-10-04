@@ -2,7 +2,7 @@ import random
 import turtle as t
 
 screen = t.Screen()
-screen.bgcolor("#242933")
+# screen.bgcolor("#242933")
 
 t.colormode(255)
 tim = t.Turtle()
@@ -62,6 +62,6 @@ def drawACircle():
 # drawSquare()
 # drawMultipleElementss()
 # randomWalk()
-drawACircle()
+# drawACircle()
 
 screen.exitonclick()
