@@ -62,6 +62,6 @@ def drawACircle():
 # drawSquare()
 # drawMultipleElementss()
 # randomWalk()
-# drawACircle()
+drawACircle()
 
 screen.exitonclick()
