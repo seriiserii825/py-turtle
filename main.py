@@ -1,6 +1,9 @@
 import random
 import turtle as t
 
+screen = t.Screen()
+screen.bgcolor("#242933")
+
 t.colormode(255)
 tim = t.Turtle()
 
@@ -46,10 +49,19 @@ def randomWalk():
         tim.forward(20)
         tim.setheading(direction)
 
+def drawACircle():
+    tim.speed('fastest')
+    gap = 1
+    total_circles = int(360 / gap)
+    for _ in range(total_circles):
+        tim.color(randomColor())
+        current_heading = tim.heading()
+        tim.setheading(current_heading + gap)
+        tim.circle(120)
+
 # drawSquare()
 # drawMultipleElementss()
-randomWalk()
+# randomWalk()
+drawACircle()
 
-screen = t.Screen()
-screen.bgcolor("#800080")
 screen.exitonclick()
