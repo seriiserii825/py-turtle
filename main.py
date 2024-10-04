@@ -1,7 +1,8 @@
 import random
-from turtle import Turtle, Screen
+import turtle as t
 
-tim = Turtle()
+t.colormode(255)
+tim = t.Turtle()
 
 colors = ['#99201a', '#503696', 'green', 'purple', 'orange', 'black', 'pink', 'brown', 'magenta', 'lime']
 
@@ -28,13 +29,19 @@ def drawSquare():
             tim.forward(10)
         tim.left(90)
 
+def randomColor():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
+
 def randomWalk():
     directions = [0, 90, 180, 270]
     tim.pensize(6)
     tim.speed(1)
 
     for _ in range(300):
-        tim.color(random.choice(colors))
+        tim.color(randomColor())
         direction = random.choice(directions)
         tim.forward(20)
         tim.setheading(direction)
@@ -43,6 +50,6 @@ def randomWalk():
 # drawMultipleElementss()
 randomWalk()
 
-screen = Screen()
+screen = t.Screen()
 screen.bgcolor("#800080")
 screen.exitonclick()
