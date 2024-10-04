@@ -27,20 +27,17 @@ def drawSquare():
             tim.speed(2)
             tim.forward(10)
         tim.left(90)
-        tim.speed(3)
 
 def randomWalk():
     directions = [0, 90, 180, 270]
     tim.pensize(6)
+    tim.speed(1)
 
-    for _ in range(100):
+    for _ in range(300):
         tim.color(random.choice(colors))
-        tim.speed(1)
-        tim.left(random.choice(directions))
-        tim.speed(1)
-        tim.forward(30)
-        tim.pencolor()
-
+        direction = random.choice(directions)
+        tim.forward(20)
+        tim.setheading(direction)
 
 # drawSquare()
 # drawMultipleElementss()
